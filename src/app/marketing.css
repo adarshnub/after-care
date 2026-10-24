@@ -2289,6 +2289,9 @@ html:has(.marketing) {
   top: 8px;
 }
 .deck-review {
+  width: 100%;
+  aspect-ratio: 800 / 952;
+  background: #e5ebdf;
   max-width: 450px;
   max-height: 575px;
   overflow: hidden;

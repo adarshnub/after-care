@@ -51,5 +51,6 @@ Initial browser validation passed at 360, 390, 768, 1024, 1280, and 1440 pixels 
 | Asset treatment | Actual fictional app screens replace generated placeholder UI. HTML phone/browser frames provide depth without rasterizing controls. |
 | Responsive behavior | Stacked editorial layout and scrollable screen gallery, no horizontal page overflow, visible mobile motion control. Fixed a missing space when a desktop line break collapses on phones. |
 | Interactions | Role tabs, arrow-key tab selection, native screenshot dialog, motion toggle, menu, and six-scene keyboard deck pass. Controls wait for hydration, avoiding lost early taps. |
+| Presentation media loading | The nurse-review image has a stable aspect-ratio frame and eager original-image loading, preventing the slide from collapsing while its image arrives. The browser regression checks image completion. |
 
 Browser/IAB runtime was unavailable; verification used the project's Playwright Chromium runtime. Screenshot evidence is in `docs/screenshots/landing-*.png` and `presentation-*.png`. WebGL was verified with a rendered canvas, with static fallback and reduced-motion paths also checked. No material mismatch remains in the chosen implementation; the true 3D scene, real product screenshots, and omitted unrequested photograph are the intentional differences recorded above.

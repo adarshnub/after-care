@@ -288,6 +288,8 @@ export function Presentation() {
               <div className="deck-review">
                 <Image
                   src={productScreens.review}
+                unoptimized
+                loading="eager"
                   alt="Nurse review screen with an AI-organized draft and a clarification"
                   width={800}
                   height={952}

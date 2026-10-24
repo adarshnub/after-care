@@ -97,6 +97,12 @@ test("presentation advances by keyboard and controls, exposes notes, and links t
   await expect(
     page.getByRole("group", { name: "Slide 2 of 6", exact: true }),
   ).toBeVisible();
+  const reviewImage = page.getByAltText(
+    "Nurse review screen with an AI-organized draft and a clarification",
+  );
+  await expect
+    .poll(() => reviewImage.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0))
+    .toBe(true);
   await page.getByRole("button", { name: "Show speaker notes" }).click();
   await expect(
     page.getByRole("complementary", { name: "Speaker notes" }),
