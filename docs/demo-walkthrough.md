@@ -1,6 +1,15 @@
 # Competition demo walkthrough
 
-Open [After Care](https://after-care1.vercel.app/). Use the private nurse credentials supplied by the project owner. Patient and caregiver credentials are in the owner's ignored `.data/competition-access.txt`; do not include this file in a public submission.
+Open [After Care](https://after-care1.vercel.app/) for the public story, or [presentation mode](https://after-care1.vercel.app/present) for a six-scene pitch. The actual application is at [the care workspace](https://after-care1.vercel.app/workspace). Use private nurse credentials to sign in. Patient and caregiver credentials are in the owner's ignored `.data/competition-access.txt`; do not include this file in a public submission.
+
+## Using presentation mode
+
+- **← / →** and **Space** move through the story. **Home / End** jump to the first or last scene. The on-screen controls also work on a phone.
+- **Speaker notes** opens a short script and the important boundaries for each scene.
+- **Fullscreen** expands the deck where supported. Close the presentation to return to the landing page.
+- The final scene's **Open After Care** action leads to the actual workspace. Hospital credentials remain private; slides do not expose account passwords.
+
+![Speaker notes beside the nurse-review presentation scene](screenshots/presentation-speaker-notes.png)
 
 ## A five-minute presentation
 

@@ -69,7 +69,7 @@ test("nurse creates a reviewed plan; both issued accounts see only their patient
     name = `QA Patient ${suffix}`;
   const today = dateInZone(new Date(), "Asia/Kolkata"),
     end = addDays(today, 7);
-  await page.goto("/");
+  await page.goto("/workspace");
   await expect(
     page.getByRole("heading", { name: "One day at a time, Alex." }),
   ).toBeVisible();
@@ -278,7 +278,7 @@ test("mobile navigation, assistant, notification setup status, and offline recov
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/");
+  await page.goto("/workspace");
   await expect(
     page.getByRole("heading", { name: "One day at a time, Alex." }),
   ).toBeVisible();

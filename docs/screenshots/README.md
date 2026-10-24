@@ -4,6 +4,8 @@ Captured on 25 October 2026 from [the deployed application](https://after-care1.
 
 | Use case | Screenshot |
 | --- | --- |
+| Animated public landing | [Desktop](landing-desktop.png) · [Phone](landing-mobile.png) |
+| Project presentation | [Opening scene](presentation-desktop.png) · [Speaker notes](presentation-speaker-notes.png) |
 | Sign-in | [Desktop sign-in](sign-in-desktop.png) |
 | Nurse roster | [Nurse workspace](nurse-workspace-desktop.png) |
 | Enrollment | [Patient and caregiver details](nurse-patient-details.png) |

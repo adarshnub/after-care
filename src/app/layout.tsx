@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import "./marketing.css";
 export const metadata: Metadata = {
   title: "After Care — Your recovery, together",
   description:

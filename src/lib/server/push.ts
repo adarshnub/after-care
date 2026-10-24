@@ -132,7 +132,7 @@ export async function sendReminders(now = new Date()) {
                 title: reminder.title,
                 body: reminder.body,
                 tag: reminder.key,
-                url: "/",
+                url: "/workspace",
               }),
               { TTL: 900, timeout: 10000 },
             );

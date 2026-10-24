@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open **http://localhost:3000**. Without Supabase configuration, development opens a clearly labeled workspace with fictional demo data. Use the view selector to explore the patient, caregiver, and nurse experiences. The demo stores records and hashed credentials on the local server in the ignored `.data/` directory. It is for local evaluation, not real patient records or multiple server instances.
+Open **http://localhost:3000** for the public landing page, **http://localhost:3000/present** for the keyboard-controlled project presentation, and **http://localhost:3000/workspace** for the care application. Without Supabase configuration, the workspace uses clearly labeled fictional demo data. Use the view selector to explore the patient, caregiver, and nurse experiences. The demo stores records and hashed credentials on the local server in the ignored `.data/` directory. It is for local evaluation, not real patient records or multiple server instances.
 
 The **Nurse view → New discharge** workflow creates working demo accounts. Use the generated sign-in details at `/login` to test the patient and caregiver separately. The role selector is available only to demo accounts, and demo access is disabled when either Supabase setting is supplied.
 

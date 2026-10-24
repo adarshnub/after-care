@@ -191,7 +191,7 @@ export function AftercareApp({
     setSection(value.viewer.role === "nurse" ? "patients" : "overview");
     setSelectedId(null);
     if (window.location.pathname === "/login")
-      window.history.replaceState(null, "", "/");
+      window.history.replaceState(null, "", "/workspace");
   }
   if (!workspace || signedOut)
     return <LoginScreen allowDemo={allowDemo} onLogin={onLogin} />;

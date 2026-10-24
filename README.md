@@ -6,7 +6,7 @@
 
 Nurse-reviewed discharge instructions, organized into a daily care plan for patients and the people supporting them.
 
-[**Live application**](https://after-care1.vercel.app/) · [Demo walkthrough](docs/demo-walkthrough.md) · [Setup guide](docs/development.md) · [Deployment](docs/vercel-deployment.md)
+[**Explore After Care**](https://after-care1.vercel.app/) · [**Presentation mode**](https://after-care1.vercel.app/present) · [Care workspace](https://after-care1.vercel.app/workspace) · [Demo walkthrough](docs/demo-walkthrough.md) · [Setup guide](docs/development.md)
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-111111?logo=nextdotjs)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
@@ -16,7 +16,7 @@ Nurse-reviewed discharge instructions, organized into a daily care plan for pati
 
 </div>
 
-![Patient dashboard: recovery progress, daily tasks, care team, and medication supply](docs/screenshots/patient-overview-desktop.png)
+![After Care landing page with an animated three-dimensional care flower and real mobile product screen](docs/screenshots/landing-desktop.png)
 
 ## The problem
 
@@ -46,6 +46,14 @@ flowchart LR
 ## See the experience
 
 These screenshots come from the working application using fictional demonstration records and invented medication names. Mobile screenshots show the responsive PWA in a browser, rather than a native app-store application.
+
+### A story ready to present
+
+The public [landing page](https://after-care1.vercel.app/) introduces the hospital-to-home journey with a lightweight Three.js care flower, floating product screen, scroll reveals, and an interactive role explorer. Visitors can pause animations, switch between patient/caregiver/nurse views, and enlarge real screenshots. Reduced-motion preferences and devices without WebGL have a static fallback.
+
+[Presentation mode](https://after-care1.vercel.app/present) turns the project into six focused scenes. Use **← / →**, **Space**, **Home**, or **End** to navigate; show speaker notes when rehearsing and enter fullscreen for the pitch. The care application remains at [`/workspace`](https://after-care1.vercel.app/workspace), with credential entry at [`/login`](https://after-care1.vercel.app/login).
+
+![After Care presentation with the recovery story and product visuals](docs/screenshots/presentation-desktop.png)
 
 ### For the discharge nurse
 
@@ -134,7 +142,7 @@ npm ci
 npm run dev
 ```
 
-Open [localhost:3000](http://localhost:3000). A labeled fictional demo lets you switch between patient, caregiver, and nurse views. Local records and hashed credentials stay in the ignored `.data/` directory. AI and real push delivery need provider configuration. The local file demo is disabled on Vercel.
+Open [localhost:3000](http://localhost:3000) for the landing page, [`/present`](http://localhost:3000/present) for the slide presentation, or [`/workspace`](http://localhost:3000/workspace) for a labeled fictional demo with patient, caregiver, and nurse views. Local records and hashed credentials stay in the ignored `.data/` directory. AI and real push delivery need provider configuration. The local file demo is disabled on Vercel.
 
 For connected development, copy `.env.example` to `.env.local`, add Supabase server credentials, apply the migration to a new database, and configure OpenAI using the [setup guide](docs/development.md). The current live database already has the migration applied.
 
@@ -156,6 +164,7 @@ flowchart TB
 | Layer | Implementation |
 | --- | --- |
 | Application | Next.js 16 App Router, React 19, TypeScript, responsive CSS |
+| Public story | Three.js 3D scene, native CSS motion, role explorer, screenshot lightboxes, keyboard presentation |
 | AI | OpenAI Responses API, structured outputs, Zod validation, nurse review |
 | Data and identity | Supabase Postgres and Auth through the Next.js server |
 | PWA | Manifest, icons, service worker, install help, offline screen |
@@ -199,6 +208,7 @@ Next steps include device-level reminder validation, operational monitoring, aud
 ## Project guide
 
 - [Demo walkthrough and fictional nurse instructions](docs/demo-walkthrough.md)
+- [Landing design and visual validation](docs/design/landing-design.md)
 - [Development, Supabase setup, provisioning, and testing](docs/development.md)
 - [Vercel configuration and reminder scheduling](docs/vercel-deployment.md)
 - [Schema migration](supabase/migrations/202610240001_after_care.sql)

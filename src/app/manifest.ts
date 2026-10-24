@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: "After Care",
     description:
       "A little care, every day. Your hospital-reviewed discharge plan, medication schedule, and care team.",
-    start_url: "/",
+    start_url: "/workspace",
     scope: "/",
     display: "standalone",
     background_color: "#f7f8fa",
