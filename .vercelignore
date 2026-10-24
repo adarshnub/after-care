@@ -1,0 +1,10 @@
+.git/
+.vercel/
+.next/
+node_modules/
+.env*
+.data/
+*.tsbuildinfo
+playwright-report/
+test-results/
+docs/interface-concept.png

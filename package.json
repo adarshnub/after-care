@@ -1,0 +1,39 @@
+{
+  "name": "after-care",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "reminders": "tsx scripts/send-reminders.mts",
+    "test:e2e": "playwright test",
+    "check:deploy": "tsx scripts/check-deploy.ts",
+    "setup:push": "tsx scripts/setup-push.mts"
+  },
+  "dependencies": {
+    "@next/env": "16.4.3",
+    "@supabase/supabase-js": "^2.0.0",
+    "lucide-react": "^0.468.0",
+    "next": "16.4.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "server-only": "^0.0.1",
+    "web-push": "^3.6.7",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/web-push": "^3.6.4",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}
