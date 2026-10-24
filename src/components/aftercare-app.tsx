@@ -254,6 +254,7 @@ export function AftercareApp({
     }
   }
   async function install() {
+    setSidebar(false);
     try {
       if (pwa.canInstall) {
         const success = await pwa.install();

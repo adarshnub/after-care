@@ -112,6 +112,11 @@ test("nurse creates a reviewed plan; both issued accounts see only their patient
   await page
     .getByRole("checkbox", { name: /I have checked this plan/ })
     .check();
+  await page.getByLabel("Recovery summary").fill("Fictional QA care plan, reviewed and updated.");
+  await expect(
+    page.getByRole("button", { name: "Approve & create access" }),
+  ).toBeDisabled();
+  await page.getByRole("checkbox", { name: /I have checked this plan/ }).check();
   await page.getByRole("button", { name: "Approve & create access" }).click();
   await expect(
     page.getByRole("heading", { name: `${name}’s care plan is ready.` }),
@@ -277,11 +282,14 @@ test("mobile navigation, assistant, notification setup status, and offline recov
   await expect(
     page.getByRole("heading", { name: "One day at a time, Alex." }),
   ).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "Main navigation" })).toBeHidden();
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(
     390,
   );
   await page.getByRole("button", { name: "Open navigation" }).click();
+  await expect(page.getByRole("navigation", { name: "Main navigation" })).toBeVisible();
   await page.getByRole("button", { name: "Medications", exact: true }).click();
+  await expect(page.getByRole("navigation", { name: "Main navigation" })).toBeHidden();
   await expect(
     page.getByRole("heading", { name: "A little clarity with every dose." }),
   ).toBeVisible();
